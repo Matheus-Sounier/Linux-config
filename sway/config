@@ -1,0 +1,109 @@
+# ~/.config/sway/config
+# Configuração Principal Modular do Sway
+
+# ================================
+# VARIÁVEIS BÁSICAS
+# ================================
+set $mod Mod4
+set $term kitty
+
+# ================================
+# IMPORTAÇÕES (ORDEM IMPORTA!)
+# ================================
+
+include temas/Tokyo_night.conf 
+
+# 2. Configurações principais
+include configs/appearance.conf
+include configs/display.conf
+include configs/input.conf
+include configs/keybinds.conf
+include configs/workspaces.conf
+
+
+# ================================
+# CONFIGURAÇÕES BÁSICAS
+# ================================
+
+# Fonte
+font pango:Maple Mono Regular 13
+
+# Performance e comportamento
+focus_follows_mouse no
+
+# ================================
+# INCLUDES DO SISTEMA
+# ================================
+include /etc/sway/config.d/*
+
+# ~/.config/sway/config/modes.conf
+# Modos customizados para Sway
+
+# ================================
+# MODO DE REDIMENSIONAMENTO
+# ================================
+mode "resize" {
+    # Redimensionar com vim keys
+    bindsym h resize shrink width 10px
+    bindsym j resize grow height 10px
+    bindsym k resize shrink height 10px
+    bindsym l resize grow width 10px
+
+    # Redimensionar com setas
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    # Sair do modo
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# ================================
+# MODO SISTEMA (POWER MENU)
+# ================================
+set $mode_system Sistema: (l) Lock, (e) Exit, (s) Suspend, (r) Reboot, (p) Power off
+mode "$mode_system" {
+    bindsym l exec swaylock -f -c 2e3440, mode "default"
+    bindsym e exec swaymsg exit, mode "default"
+    bindsym s exec systemctl suspend, mode "default"
+    bindsym r exec systemctl reboot, mode "default"
+    bindsym p exec systemctl poweroff -i, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+q mode "$mode_system"
+
+# ~/.config/sway/config/autostart.conf
+# Aplicações e serviços que iniciam automaticamente
+
+# ================================
+# BAR E NOTIFICAÇÕES
+# ================================
+exec waybar
+exec mako
+
+# ================================
+# CLIPBOARD
+# ================================
+exec wl-paste -t text --watch clipman store
+
+# ================================
+# BLOQUEIO DE TELA E IDLE
+# ================================
+exec swayidle -w \
+    timeout 400 'swaylock -f -c 2e3440' \
+    timeout 600 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -f -c 2e3440'
+
+# ================================
+# OUTRAS APLICAÇÕES (descomente se necessário)
+# ================================
+# exec nm-applet --indicator
+# exec blueman-applet
+# exec gammastep
