@@ -1,0 +1,180 @@
+* {
+  /* General taskbar font, I like maple mono ^-^*/
+  font-family: Maple Mono;
+  border-radius: 8px;
+  font-size: 13px;
+  padding: 1px;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+window#waybar {
+  /* Linear gradients are used because it makes less harsh rounded border radius, gtk bug :p */
+  background-image: linear-gradient(to bottom, #0c0a09 100%);
+  border-radius: 14px;
+  padding: 0px;
+  border-style: none;
+}
+
+#battery,
+#network,
+#clock,
+#custom-applauncher,
+#tray,
+#workspaces,
+#pulseaudio,
+#mpris {
+  background-image: linear-gradient(to bottom, #27232b 100%);
+  margin: 7px;
+  margin-right: 0px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: #c0caf5;
+  border-style: none;
+  transition-duration: 120ms;
+  font-weight: bold;
+}
+
+#clock {
+  margin-right: 6px;
+}
+
+#pulseaudio:hover {
+  background-image: linear-gradient(to bottom, #7aa2f7 100%);
+  color: #0c0a09;
+  transition-duration: 120ms;
+}
+
+#mpris:hover {
+  background-image: linear-gradient(to bottom, #7aa2f7 100%);
+  color: #0c0a09;
+  transition: all 0.2s ease-in-out;
+}
+
+#custom-applauncher {
+  transition-duration: 120ms;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+#custom-applauncher:hover {
+  background-image: linear-gradient(to bottom, #7aa2f7 100%);
+  color: #27232b;
+  transition-duration: 120ms;
+
+}
+
+#tray menu {
+  background-color: #27232b;
+  color: #c0caf5;
+  padding: 4px;
+}
+#tray menu menuitem {
+  background-image: linear-gradient(to bottom, #0c0a09 100%);
+
+  margin: 3px;
+  color: #c0caf5;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #27232b;
+}
+#tray menu menuitem:hover {
+  background-image: linear-gradient(to bottom, #0c0a09 100%);
+  color: #7aa2f7;
+  font-weight: bold;
+}
+
+#workspaces button {
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: #c0caf5;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: #7aa2f7;
+}
+#workspaces button.focused {
+  color: #7aa2f7;
+  font-weight: bold;
+}
+#workspaces button.active {
+  color: #7aa2f7;
+  font-weight: bold;
+}
+#workspaces button.urgent {
+  color: #fcb167;
+}
+/* 
+#battery {
+  background-color: #1d2021;
+  color: #c0caf5;
+}
+
+#battery .capacity {
+  color: #c0caf5;
+}
+
+#battery.fucking-full .icon{
+  color: #a6e3a1;
+}
+
+#battery.excellent .icon{
+  color: #94e2d5;
+}
+
+#battery.good .icon{
+  color: #89b4fa;
+}
+
+#battery.warning .icon{
+  color: #fab387;
+}
+
+#battery.critical .icon{
+  color: #f38ba8;
+}
+
+#battery.urgent .icon{
+  color: #fc4649;
+}
+
+#battery.charging .icon{
+  color: #84cc16;
+} */
+
+
+
+
+/* #battery {
+  color: #c0caf5;
+} */
+
+#battery .capacity{
+  color: #c0caf5;
+}
+#battery.fucking-full{
+  color: #a6e3a1;
+}
+#battery.excellent{
+  color: #94e2d5;
+}
+#battery.good{
+  color: #89b4fa;
+}
+#battery.warning{
+  color: #fab387;
+}
+#battery.critical{
+  color: #f38ba8;
+}
+#battery.urgent{
+  color: #fc4649;
+}
+#battery.charging{
+  color: #84cc16;
+}
