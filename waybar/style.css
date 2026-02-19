@@ -109,72 +109,8 @@ window#waybar {
 #workspaces button.urgent {
   color: #fcb167;
 }
-/* 
-#battery {
-  background-color: #1d2021;
-  color: #c0caf5;
-}
-
-#battery .capacity {
-  color: #c0caf5;
-}
-
-#battery.fucking-full .icon{
-  color: #a6e3a1;
-}
-
-#battery.excellent .icon{
-  color: #94e2d5;
-}
-
-#battery.good .icon{
-  color: #89b4fa;
-}
-
-#battery.warning .icon{
-  color: #fab387;
-}
-
-#battery.critical .icon{
-  color: #f38ba8;
-}
-
-#battery.urgent .icon{
-  color: #fc4649;
-}
-
-#battery.charging .icon{
-  color: #84cc16;
-} */
-
-
-
-
-/* #battery {
-  color: #c0caf5;
-} */
 
 #battery .capacity{
   color: #c0caf5;
-}
-#battery.fucking-full{
-  color: #a6e3a1;
-}
-#battery.excellent{
-  color: #94e2d5;
-}
-#battery.good{
-  color: #89b4fa;
-}
-#battery.warning{
-  color: #fab387;
-}
-#battery.critical{
-  color: #f38ba8;
-}
-#battery.urgent{
-  color: #fc4649;
-}
-#battery.charging{
-  color: #84cc16;
+  font-weight: bold;
 }

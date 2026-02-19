@@ -43,7 +43,7 @@
     "format-wifi": "   {bandwidthDownBits}",
     "format-ethernet": "   {bandwidthDownBits}",
     "format-disconnected": "󰤮   No Network",
-    "interval": 3,
+    "interval": 2,
     "tooltip": false
   },
 
@@ -68,9 +68,7 @@
     "spotify": "♫",
     "mpv": "▶",
     "vlc": "▶",
-    "firefox": "🦊",
-    "chrome": "🌐",
-    "chromium": "🌐"
+    "chrome": "🌐"
   },
   "ignored-players": ["playerctld"],
   "max-length": 30,
@@ -81,14 +79,6 @@
   },
 
   "battery": {
-  "states": {
-    "fucking-full": 90,
-    "excellent": 80,
-    "good": 60,
-    "warning": 30,
-    "critical": 15,
-    "urgent": 0
-  },
     "format": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
     "format-plugged": "󰂄 {capacity}%",
