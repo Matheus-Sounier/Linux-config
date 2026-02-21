@@ -8,7 +8,7 @@ set $mod Mod4
 set $term kitty
 
 # ================================
-# IMPORTAÇÕES (ORDEM IMPORTA!)
+# IMPORTAÇÕES
 # ================================
 
 include temas/Tokyo_night.conf 
@@ -77,9 +77,6 @@ mode "$mode_system" {
 }
 bindsym $mod+Shift+q mode "$mode_system"
 
-# ~/.config/sway/config/autostart.conf
-# Aplicações e serviços que iniciam automaticamente
-
 # ================================
 # BAR E NOTIFICAÇÕES
 # ================================
@@ -99,10 +96,3 @@ exec swayidle -w \
     timeout 500 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock -f -c 2e3440'
-
-# ================================
-# OUTRAS APLICAÇÕES (descomente se necessário)
-# ================================
-# exec nm-applet --indicator
-# exec blueman-applet
-# exec gammastep
