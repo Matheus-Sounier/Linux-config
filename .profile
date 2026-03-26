@@ -14,6 +14,10 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "$HOME/usr/sbin" ] ; then
+    PATH="$HOME/usr/sbin:$PATH"
+fi
+
 # Aplicações padrão
 export EDITOR=code
 export BROWSER=google-chrome

@@ -1,28 +1,31 @@
 * {
   /* General taskbar font, I like maple mono ^-^*/
   font-family: Maple Mono;
-  border-radius: 8px;
+  /* border-radius: 8px; */
+  /* border-top-left-radius: 14px;
+  border-top-right-radius: 14px; */
   font-size: 13px;
-  padding: 1px;
+  /* padding: 1px; */
   background: transparent;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 window#waybar {
   /* Linear gradients are used because it makes less harsh rounded border radius, gtk bug :p */
   background-image: linear-gradient(to bottom, #0c0a09 100%);
-  border-radius: 14px;
+  /* border-radius: 14px; */
   padding: 0px;
-  border-style: none;
+  /* border-style: none; */
+  opacity: 0.7;
 }
 
 #battery,
 #network,
 #clock,
-#custom-applauncher,
+#custom-weather,
 #tray,
 #workspaces,
-#pulseaudio,
+#pipewire-pulse,
 #mpris {
   background-image: linear-gradient(to bottom, #27232b 100%);
   margin: 7px;
@@ -32,14 +35,14 @@ window#waybar {
   color: #c0caf5;
   border-style: none;
   transition-duration: 120ms;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 #clock {
   margin-right: 6px;
 }
 
-#pulseaudio:hover {
+#pipewire-pulse:hover {
   background-image: linear-gradient(to bottom, #7aa2f7 100%);
   color: #0c0a09;
   transition-duration: 120ms;
@@ -48,16 +51,16 @@ window#waybar {
 #mpris:hover {
   background-image: linear-gradient(to bottom, #7aa2f7 100%);
   color: #0c0a09;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
-#custom-applauncher {
+#custom-weather {
   transition-duration: 120ms;
   font-weight: bold;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 
-#custom-applauncher:hover {
+#custom-weather:hover {
   background-image: linear-gradient(to bottom, #7aa2f7 100%);
   color: #27232b;
   transition-duration: 120ms;

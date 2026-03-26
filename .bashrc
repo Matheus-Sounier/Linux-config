@@ -10,7 +10,6 @@ esac
 if [ "$XDG_SESSION_TYPE" = "wayland" ] && [ -n "$WAYLAND_DISPLAY" ]; then
     alias code='code --enable-features=UseOzonePlatform --ozone-platform=wayland --disable-gpu-sandbox'
     alias chrome='google-chrome --enable-features=UseOzonePlatform --ozone-platform=wayland'
-    alias chromium='chromium --enable-features=UseOzonePlatform --ozone-platform=wayland'
 fi
 
 # HISTÓRICO OTIMIZADO
@@ -23,7 +22,7 @@ shopt -s globstar
 
 # PROMPT COM GIT BRANCH
 case "$TERM" in
-    xterm-color|*-256color|screen-256color|tmux-256color|kitty*) color_prompt=yes;;
+    (xterm-color|*-256color|screen-256color|tmux-256color|kitty*) color_prompt=yes;;
 esac
 
 if [ "$color_prompt" = yes ]; then
@@ -37,9 +36,13 @@ else
 fi
 unset color_prompt
 
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8 
+export XLOCALEDIR=/usr/share/X11/locale
+
 # Terminal title
 case "$TERM" in
-xterm*|rxvt*|kitty*)
+    (term*|rxvt*|kitty*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
     ;;
 esac

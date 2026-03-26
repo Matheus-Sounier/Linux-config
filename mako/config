@@ -12,7 +12,7 @@ on-touch=dismiss
 
 on-notify=none
 
-font=Maple Mono Regular 10
+font=Maple Mono Regular 10fdf
 
 background-color=#1a1b26
 

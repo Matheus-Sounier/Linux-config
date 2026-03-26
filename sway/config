@@ -1,46 +1,29 @@
 # ~/.config/sway/config
-# Configuração Principal Modular do Sway
 
-# ================================
-# VARIÁVEIS BÁSICAS
-# ================================
+# Variáveis
 set $mod Mod4
 set $term kitty
 
-# ================================
-# IMPORTAÇÕES
-# ================================
-
+# Tema
 include temas/Tokyo_night.conf 
 
-# 2. Configurações principais
+# Configurações principais
 include configs/appearance.conf
 include configs/display.conf
 include configs/input.conf
 include configs/keybinds.conf
 include configs/workspaces.conf
 
-# ================================
-# CONFIGURAÇÕES BÁSICAS
-# ================================
-
 # Fonte
-font pango:Maple Mono Regular 13
+font pango:Maple Mono Regular 12
 
 # Performance e comportamento
 focus_follows_mouse no
 
-# ================================
-# INCLUDES DO SISTEMA
-# ================================
+# includes do sistema
 include /etc/sway/config.d/*
 
-# ~/.config/sway/config/modes.conf
-# Modos customizados para Sway
-
-# ================================
-# MODO DE REDIMENSIONAMENTO
-# ================================
+# Modo de redimensionamento
 mode "resize" {
     # Redimensionar com vim keys
     bindsym h resize shrink width 10px
@@ -61,9 +44,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# ================================
-# MODO SISTEMA (POWER MENU)
-# ================================
+# Modo sistema (POWER MENU)
 set $mode_system Sistema: (l) Lock, (e) Exit, (s) Suspend, (r) Reboot, (p) Power off
 mode "$mode_system" {
     bindsym l exec swaylock -f -C ~/.config/swaylock/config, mode "default"
@@ -77,20 +58,14 @@ mode "$mode_system" {
 }
 bindsym $mod+Shift+q mode "$mode_system"
 
-# ================================
-# BAR E NOTIFICAÇÕES
-# ================================
+# Bar e notify
 exec waybar
 exec mako
 
-# ================================
-# CLIPBOARD
-# ================================
+# Clipboard
 exec wl-paste -t text --watch clipman store
 
-# ================================
-# BLOQUEIO DE TELA E IDLE
-# ================================
+# Window block com idle
 exec swayidle -w \
     timeout 400 'swaylock -f -c 2e3440' \
     timeout 500 'swaymsg "output * dpms off"' \
