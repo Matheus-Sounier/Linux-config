@@ -1,0 +1,21 @@
+{
+    "sway/workspaces" : {
+        "on-scroll-up": "swaymsg workspace prev",
+        "on-scroll-down": "swaymsg workspace next",
+        "on-click": "activate",
+        "all-outputs": true,
+        "format": "{icon}"
+    },
+
+    "tray": {
+        "spacing": 10,
+        "icon-size": 16
+    },
+
+    "custom/power_btn": {
+        "format": " ",
+        "on-click": "systemctl poweroff",
+        "on-click-right": "systemctl reboot",
+        "tooltip-format": "Shutdown (left-click)\nReboot (right-click)"
+    }
+}

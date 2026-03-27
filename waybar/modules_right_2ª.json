@@ -1,0 +1,36 @@
+{
+    "memory": {
+        "states": {
+            "c": 90,
+            "h": 60,
+            "m": 30
+        },
+        "format": "󰾆  {used}GB",
+        "format-m": "󰾅  {used}GB",
+        "format-h": "󰓅  {used}GB",
+        "format-c": "  {used}GB",
+        "format-alt": "󰾆  {percentage}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "󰾆  {percentage}%\n {used:0.1f}GB/{total:0.1f}GB"
+    },
+
+    "disk": {
+        "interval": 30,
+        "format": "  {percentage_used}%",
+        "path": "/"
+    },
+
+    "cpu": {
+        "format": "  {usage}%",
+        "interval": 10,
+        "max-length": 10
+    },
+
+    "temperature": {
+        "thermal-zone": 0,
+        "format": " {temperatureC}°C",
+        "critical-threshold": 70,
+        "format-critical": " {temperatureC}°C"
+    }
+}

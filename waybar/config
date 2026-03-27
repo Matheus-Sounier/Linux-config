@@ -7,7 +7,14 @@
     "position": "bottom",
     "margin-right": 0,
     "margin-left": 0,
+        "include": [
+            "~/.config/waybar/modules_left.json",
+            "~/.config/waybar/center.json",
+            "~/.config/waybar/modules_right_1ª.json",
+            "~/.config/waybar/modules_right_2ª.json"
+        ],
         "modules-left": [
+            "custom/power_btn",
             "sway/workspaces",
             "tray"
         ],
@@ -18,158 +25,13 @@
         ],
 
         "modules-right": [
-            "mpris",
             "network",
+            "backlight",
             "battery",
-            "pipewire-pulse",
+            "pulseaudio",
             "memory",
             "disk",
             "cpu",
-            "custom/power_btn"
-        ],
-
-    "sway/workspaces" : {
-        "on-scroll-up": "swaymsg workspace prev",
-        "on-scroll-down": "swaymsg workspace next",
-        "on-click": "activate",
-        "all-outputs": true,
-        "format": "{}"
-    },
-
-    "custom/weather": {
-        "tooltip" : true,
-        "format" : "{}",
-        "interval" : 1800,
-        "exec" : "waybar-wttr",
-        "return-type" : "json"
-    },
-
-    "tray": {
-        "spacing": 10,
-        "icon-size": 16
-    },
-
-    "clock": {
-        "format": "🕒 {:%A, %B %d, %Y (%R)}",
-        "format-alt": "🕒 {:%H:%M}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-            "calendar": {
-                "mode"          : "year",
-                "mode-mon-col"  : 3,
-                "weeks-pos"     : "right",
-                "on-scroll"     : 1,
-                "on-click-right": "mode",
-                    "format": {
-                                "months":     "<span color='#ffead3'><b>{}</b></span>",
-                                "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                                "weeks":      "<span color='#99ffdd'><b>{}</b></span>",
-                                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                                "today":      "<span color='#ff6699'><b>{}</b></span>"
-                    }
-            },
-            "actions":  {
-                "on-click-right": "mode",
-                "on-click-forward": "tz_up",
-                "on-click-backward": "tz_down",
-                "on-scroll-up": "shift_up",
-                "on-scroll-down": "shift_down"
-            }
-    },
-
-    "network": {
-        "format-wifi": "   {bandwidthDownBits}",
-        "format-ethernet": "   {bandwidthDownBits}",
-        "format-disconnected": "󰤮   No Network",
-        "interval": 2,
-        "tooltip": false
-    },
-
-    "memory": {
-        "interval": 10,
-        "format": " {}%",
-        "max-length": 10
-    },
-
-    "cpu": {
-        "format": " {usage}%",
-        "interval": 10,
-        "max-length": 10
-    },
-
-    "disk": {
-        "interval": 30,
-        "format": " {percentage_used}%",
-        "path": "/"
-    },
-
-    "pipewire-pulse": {
-    "scroll-step": 5,
-    "max-volume": 150,
-    "format": "{icon} {volume}%",
-    "format-bluetooth": "{icon} {volume}%",
-        "format-icons": {
-            "default": [
-                "🔈",
-                "🔉",
-                "🔊"
-            ]
-        },
-    
-        "format-muted": "🔇",
-        "on-click": "flatpak run com.saivert.pwvucontrol",
-        "tooltip": false
-    },
-
-    "mpris": {
-    "format": "{player_icon} {title}",
-    "format-paused": "{player_icon} <i>{title}</i>",
-        "player-icons": {
-            "default": "♪",
-            "spotify": "♫",
-            "mpv": "▶",
-            "vlc": "▶",
-            "chrome": "🌐"
-        },
-            "ignored-players": [
-                "playerctld"
-            ],
-        "max-length": 20,
-        "tooltip-format": "{artist} - {album}\n{title}",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous"
-    },
-
-    "custom/power_btn": {
-        "format": "",
-        "on-click": "systemctl poweroff",
-        "on-click-right": "systemctl reboot",
-        "tooltip": "Shutdown (left-click)\nReboot (right-click)"
-    },
-
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 20
-        },
-        "format": "{icon} {capacity}%",
-        "rotate": 0,
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-            "format-icons": [
-                "󰂎",
-                "󰁺",
-                "󰁻",
-                "󰁼",
-                "󰁽",
-                "󰁾",
-                "󰁿",
-                "󰂀",
-                "󰂁",
-                "󰂂",
-                "󰁹"
-            ]
-    }
+            "temperature"
+        ]
 }

@@ -1,0 +1,98 @@
+{
+    "network": {
+        "format-icons": [
+                        "󰤯",
+                        "󰤟",
+                        "󰤢",
+                        "󰤥",
+                        "󰤨"
+        ],
+        "format-wifi": "{icon}   {bandwidthDownBits}",
+        "format-ethernet": "{icon}   {bandwidthDownBits}",
+        "format-disconnected": "{icon}   No Network",
+        "interval": 2,
+        "tooltip-format":"Network: {essid}\nSignal strength: {signaldBm}dBm ({bandwidthDownBytes})\nFrequency: {frequency}MHz\nInterface: {ifname}"
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}  {percent}%",
+        "format-alt-click": "click-right",
+        "format-alt": "{icon}  {percent}%",
+            "format-icons": [
+                                "󰃞",
+                                "󰃟",
+                                "󰃠"
+            ],
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "rotate": 0,
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-full": "󰂅",
+        "format-icons": [
+                "󰂎",
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+        ],
+        "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}% | {time}",
+        "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}% | {time}"
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "on-click": "mic-level toggle-mute",
+        "on-click-right": "flatpak run com.saivert.pwvucontrol",
+        "on-scroll-up": "mic-level increase",
+        "on-scroll-down": "mic-level decrease",
+        "scroll-step": 5,
+        "tooltip": false,
+        "tooltip-format": "Mic Level: {volume}%"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-muted": "",
+        "on-click": "audio-level toggle-mute",
+        "on-click-right": "flatpak run com.saivert.pwvucontrol",
+        "on-scroll-up": "audio-level increase",
+        "on-scroll-down": "audio-level decrease",
+        "scroll-step": 5,
+            "format-icons": {
+                "headphone": "",
+                "hands-free": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                    "default": [
+                                "",
+                                "",
+                                ""
+                    ]
+            },
+        "tooltip": false,
+        "tooltip-format": "Volume: {volume}%"
+    }
+}

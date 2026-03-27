@@ -7,34 +7,8 @@ effect-scale=0.8
 
 font=Maple Mono NF
 font-size=90
-# indicator-radius=135
-# indicator-thickness=4
-
-# Cores do indicador
-# indicator-color=00000000         # Fundo do indicador: transparente
-# key-hl-color=ffffffff            # Teclas piscando: branco
-# line-color=00000000              # Linha separadora: transparente
-
-# Estados do interior
-# inside-color=00000000            # Interior normal: transparente
-# inside-clear-color=00ff37a8      # Interior ao apagar: laranja semi-transparente
-# inside-ver-color=3939b9f8        # Interior verificando: azul semi-transparente
-# inside-wrong-color=ff0000f0      # Interior erro: vermelho semi-transparente
-
-# Cores do anel e texto
-#ring-color=ffffffff              # Anel normal: branco
-#ring-ver-color=00ff00ff          # Anel verificando: verde
-#separator-color=00000000         # Separador: transparente
-#text-ver-color=00ff00ff          # Texto verificando: verde
 
 daemonize
-# screenshot
-
-#grace=1
-
-# show-failed-attempts
-
-# fade-in=0.2
 
 ignore-empty-password
 show-failed-attempts
@@ -42,10 +16,6 @@ show-failed-attempts
 clock
 timestr=%R
 datestr=%a, %e of %B
-
-#effect-blur=20x2
-#effect-greyscale
-#effect-scale=0.3
 
 indicator
 indicator-radius=200
@@ -78,7 +48,6 @@ text-clear-color=ffd20400
 text-ver-color=d9d8d800
 text-wrong-color=ee2e2400
 
-#bs-hl-color=ee2e24FF
 caps-lock-key-hl-color=ffd204FF
 caps-lock-bs-hl-color=ee2e24FF
 disable-caps-lock-text
