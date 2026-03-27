@@ -9,7 +9,7 @@
 
 window#waybar {
   background-color: rgba(21, 18, 27, 0);
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
 #custom-power_btn,
@@ -27,9 +27,8 @@ window#waybar {
 #backlight,
 #network {
   background-color: #0c0a09;
-  margin: 3px 0px;
   margin-bottom: 6px;
-  padding: 10px;
+  padding: 7px;
   border: 0px;
   color: #c0caf5;
   transition-duration: 120ms;
@@ -45,7 +44,7 @@ window#waybar {
 
 tooltip {
     background: #0c0a09;
-    opacity: 0.75;
+    opacity: 0.8;
     border-radius: 8px;
     border-width: 0.5px;
     border-style: solid;
@@ -60,20 +59,10 @@ tooltip label{
     color: #e92d4d;
 }
 
-#clock {
-  margin-right: 6px;
-}
-
 #pulseaudio:hover {
   background-color: #7aa2f7;
   color: #0c0a09;
   transition-duration: 120ms;
-}
-
-#mpris:hover {
-  background-color: #7aa2f7;
-  color: #0c0a09;
-  transition: all 0.1s ease-in-out;
 }
 
 #custom-weather {
@@ -91,8 +80,9 @@ tooltip label{
 #tray menu {
   background-color: #0c0a09;
   color: #c0caf5;
-  padding: 4px;
+  padding: 2px;
 }
+
 #tray menu menuitem {
   background-color: #0c0a09;
   margin: 3px;
@@ -101,6 +91,7 @@ tooltip label{
   border-style: solid;
   border-color: #0c0a09;
 }
+
 #tray menu menuitem:hover {
   background-color: #0c0a09;
   color: #7aa2f7;
@@ -139,17 +130,17 @@ tooltip label{
 }
 
 #memory, #network{
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 8px 0px 0px 8px;
   margin-left: 5px;
 }
 
 #pulseaudio.microphone, #pulseaudio, #temperature{
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 8px 8px 0px;
     margin-right: 5px;
 }
 
 #tray, #custom-power_btn, #clock, #workspaces, #custom-weather {
-    border-radius: 10px;
+    border-radius: 8px;
     margin-right: 4px;
     margin-left: 4px;
 }
