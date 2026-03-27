@@ -16,6 +16,7 @@
         "modules-left": [
             "custom/power_btn",
             "sway/workspaces",
+            "custom/notification",
             "tray"
         ],
 

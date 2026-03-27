@@ -25,7 +25,8 @@ window#waybar {
 #temperature,
 #workspaces,
 #backlight,
-#network {
+#network,
+#custom-swaync {
   background-color: #0c0a09;
   margin-bottom: 6px;
   padding: 7px;
@@ -139,7 +140,7 @@ tooltip label{
     margin-right: 5px;
 }
 
-#tray, #custom-power_btn, #clock, #workspaces, #custom-weather {
+#tray, #custom-power_btn, #clock, #workspaces, #custom-weather, #custom-swaync {
     border-radius: 8px;
     margin-right: 4px;
     margin-left: 4px;

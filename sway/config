@@ -60,7 +60,7 @@ bindsym $mod+Shift+q mode "$mode_system"
 
 # Bar e notify
 exec waybar
-exec mako
+exec swaync
 
 # Clipboard
 exec wl-paste -t text --watch clipman store

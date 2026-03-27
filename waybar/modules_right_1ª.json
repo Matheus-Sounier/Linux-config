@@ -73,8 +73,8 @@
     "pulseaudio": {
         "format": "{icon}  {volume}%",
         "format-bluetooth": "{icon}  {volume}%",
-        "format-muted": "",
-        "on-click": "audio-level toggle-mute",
+        "format-muted": "  ",
+        "on-click": "toggle-mute",
         "on-click-right": "flatpak run com.saivert.pwvucontrol",
         "on-scroll-up": "audio-level increase",
         "on-scroll-down": "audio-level decrease",
