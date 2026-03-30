@@ -8,10 +8,10 @@
     "margin-right": 0,
     "margin-left": 0,
         "include": [
-            "~/.config/waybar/modules_left.json",
-            "~/.config/waybar/center.json",
-            "~/.config/waybar/modules_right_1ª.json",
-            "~/.config/waybar/modules_right_2ª.json"
+            "~/.config/waybar/json/center.json",
+            "~/.config/waybar/json/modules_left.json",
+            "~/.config/waybar/json/modules_right_1ª.json",
+            "~/.config/waybar/json/modules_right_2ª.json"
         ],
         "modules-left": [
             "custom/power_btn",

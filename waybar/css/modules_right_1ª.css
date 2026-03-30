@@ -1,0 +1,10 @@
+#pulseaudio:hover {
+  background-color: #7aa2f7;
+  color: #0c0a09;
+  transition-duration: 120ms;
+}
+
+#battery.capacity{
+  color: #c0caf5;
+  font-weight: bold;
+}

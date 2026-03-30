@@ -1,0 +1,73 @@
+* {
+  border: none;
+  font-family: Maple Mono;
+  font-size: 13px;
+  background: transparent;
+  transition: all 0.1s ease-in-out;
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: rgba(21, 18, 27, 0);
+  opacity: 0.7;
+}
+
+#custom-power_btn,
+#custom-weather,
+#window,
+#disk,
+#cpu,
+#memory,
+#clock,
+#battery,
+#pulseaudio,
+#tray,
+#temperature,
+#workspaces,
+#backlight,
+#network,
+#custom-swaync {
+  background-color: #0c0a09;
+  margin-bottom: 6px;
+  padding: 7px;
+  border: 0px;
+  color: #c0caf5;
+  transition-duration: 120ms;
+  font-weight: 900;
+  opacity: 1;
+}
+
+#window {
+    border-radius: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+tooltip {
+    background: #0c0a09;
+    opacity: 0.8;
+    border-radius: 8px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #c0caf5;
+}
+
+tooltip label{
+    color: #c0caf5;
+}
+
+#memory, #network{
+  border-radius: 8px 0px 0px 8px;
+  margin-left: 5px;
+}
+
+#pulseaudio.microphone, #pulseaudio, #temperature{
+    border-radius: 0px 8px 8px 0px;
+    margin-right: 5px;
+}
+
+#tray, #custom-power_btn, #clock, #workspaces, #custom-weather, #custom-swaync {
+    border-radius: 8px;
+    margin-right: 4px;
+    margin-left: 4px;
+}

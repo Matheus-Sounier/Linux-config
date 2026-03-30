@@ -1,6 +1,10 @@
 * {
-    font-family: Ubuntu Nerd Font;
+    font-size: 12px;
+    font-family: Maple Mono;
     font-weight: bolder;
+    text-shadow: none;
+    background-color: transparent;
+    background: transparent;
 }
 
 .control-center .notification-row:focus,

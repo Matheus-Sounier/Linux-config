@@ -1,0 +1,48 @@
+
+#tray menu {
+  background-color: #0c0a09;
+  color: #c0caf5;
+  padding: 2px;
+}
+
+#tray menu menuitem {
+  background-color: #0c0a09;
+  margin: 3px;
+  color: #c0caf5;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #0c0a09;
+}
+
+#tray menu menuitem:hover {
+  background-color: #0c0a09;
+  color: #7aa2f7;
+  font-weight: bold;
+}
+
+
+#workspaces button {
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: #c0caf5;
+  margin-right: 0.1cm;
+  margin-left: 0.1cm;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: #7aa2f7;
+}
+#workspaces button.focused {
+  color: #7aa2f7;
+  font-weight: bold;
+}
+#workspaces button.active {
+  color: #7aa2f7;
+  font-weight: bold;
+}
+#workspaces button.urgent {
+  color: #fcb167;
+}
