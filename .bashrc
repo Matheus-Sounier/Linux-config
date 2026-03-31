@@ -12,11 +12,18 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ] && [ -n "$WAYLAND_DISPLAY" ]; then
     alias chrome='google-chrome --enable-features=UseOzonePlatform --ozone-platform=wayland'
 fi
 
+# Habilitar bash-completions para shells interativos
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+	. /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash_completion ]; then
+	. /etc/bash_completion
+fi
+
 # HISTÓRICO OTIMIZADO
-HISTCONTROL=ignoreboth:ignoredups
+export HISTCONTROL=erasedups:ignoredups:ignorespace
 shopt -s histappend
-HISTSIZE=5000
-HISTFILESIZE=10000
+HISTSIZE=3000
+HISTFILESIZE=5000
 shopt -s checkwinsize
 shopt -s globstar
 

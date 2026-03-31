@@ -5,21 +5,8 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# Definir o PATH para incluir o bin privado do user se existir
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-if [ -d "$HOME/usr/sbin" ] ; then
-    PATH="$HOME/usr/sbin:$PATH"
-fi
-
 # Aplicações padrão
-export EDITOR=code
+export EDITOR=/usr/bin/code
 export BROWSER=google-chrome
 export TERMINAL=kitty
 export PAGER=less

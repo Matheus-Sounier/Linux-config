@@ -20,6 +20,11 @@
   font-weight: bold;
 }
 
+#custom-swaync {
+  transition-duration: 120ms;
+  font-weight: bold;
+  transition: all 0.1s ease;
+}
 
 #workspaces button {
   transition-duration: 100ms;

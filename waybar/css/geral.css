@@ -37,6 +37,14 @@ window#waybar {
   opacity: 1;
 }
 
+#custom-weather:hover,
+#custom-power_btn:hover,
+#custom-swaync:hover,
+#pulseaudio:hover,
+#clock:hover {
+    background-color: alpha(#0c0a09, 0.8);
+}
+
 #window {
     border-radius: 10px;
     margin-left: 0px;
