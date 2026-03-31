@@ -1,0 +1,28 @@
+.widget-dnd {
+    background: #0c0a09;
+    padding: 5px 10px;
+    margin: 10px 10px 5px 10px;
+    border-radius: 5px;
+    font-size: large;
+    color: #c0caf5;
+}
+
+.widget-dnd>switch {
+    border-radius: 5px;
+    background: #c0caf5;
+}
+
+.widget-dnd>switch:checked {
+    background: #fcb167;
+    border: 1px solid #fcb167;
+}
+
+.widget-dnd>switch slider {
+    background: #0c0a09;
+    border-radius: 5px;
+}
+
+.widget-dnd>switch:checked slider {
+    background: #0c0a09;
+    border-radius: 5px;
+}

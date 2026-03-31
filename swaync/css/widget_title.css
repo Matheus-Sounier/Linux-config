@@ -1,0 +1,23 @@
+.widget-title {
+    color: #c0caf5;
+    background: #0c0a09;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.widget-title>button {
+    font-size: 1rem;
+    color: #c0caf5;
+    text-shadow: none;
+    background: #0c0a09;
+    box-shadow: none;
+    border-radius: 5px;
+    border: 0.5px solid #c0caf5;
+}
+
+.widget-title>button:hover {
+    background: #fcb167;
+    color: #0c0a09;
+}
