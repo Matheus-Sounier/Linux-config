@@ -158,18 +158,18 @@ if [ "$TERM" = "linux" ]; then
 fi
 
 # Função para mover aplicação atual para workspace específico
-sway_move_to() {
+hypr_move_to() {
     case "$1" in
-        code|1) swaymsg move container to workspace "1:" ;;
-        term|2) swaymsg move container to workspace "2:" ;;
-        web|3) swaymsg move container to workspace "3:" ;;
-        db|4) swaymsg move container to workspace "4:" ;;
-        docs|5) swaymsg move container to workspace "5:" ;;
-        git|6) swaymsg move container to workspace "6:" ;;
-        *) echo "Uso: sway_move_to [1|2|3|4|5|6]" ;;
+        code|1) hyprctl dispatch movetoworkspace 1 ;;
+        term|2) hyprctl dispatch movetoworkspace 2 ;;
+        web|3)  hyprctl dispatch movetoworkspace 3 ;;
+        db|4)   hyprctl dispatch movetoworkspace 4 ;;
+        docs|5) hyprctl dispatch movetoworkspace 5 ;;
+        git|6)  hyprctl dispatch movetoworkspace 6 ;;
+        *) echo "Uso: hypr_move_to [1|2|3|4|5|6]" ;;
     esac
 }
-alias swmv='sway_move_to'
+alias swmv='hypr_move_to'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Carrega o nvm

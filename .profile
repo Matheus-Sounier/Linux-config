@@ -13,11 +13,11 @@ export PAGER=less
 
 # Wayland - APENAS se em sessão Wayland e se não estiver definido
 if [ "$XDG_SESSION_TYPE" = "wayland" ] && [ -z "$QT_QPA_PLATFORM" ]; then
-    export XDG_CURRENT_DESKTOP=sway
+    export XDG_CURRENT_DESKTOP=Hyprland
     export QT_QPA_PLATFORM=wayland
     export GDK_BACKEND=wayland
     export MOZ_ENABLE_WAYLAND=1
-    export ELECTRON_ENABLE_WAYLAND=1
+    export ELECTRON_OZONE_PLATFORM_HINT=wayland
 fi
 
 # GCC colors
@@ -25,5 +25,5 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 
 # Se Display wayland_display e xgd_vtnr existirem, exec o sway
 if [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
-    exec sway
+    exec Hyprland
 fi
