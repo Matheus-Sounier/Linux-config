@@ -1,10 +1,10 @@
 {
-    "layer": "bottom",
+    "layer": "top",
     "spacing": 0,
     "height": 0,
     "margin-bottom": 0,
     "margin-top": 2,
-    "position": "bottom",
+    "position": "top",
     "margin-right": 0,
     "margin-left": 0,
         "include": [
