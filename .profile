@@ -23,7 +23,7 @@ fi
 # GCC colors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# Se Display wayland_display e xgd_vtnr existirem, exec o sway
+# Se Display wayland_display e xgd_vtnr existirem, exec o hypr
 if [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
     exec Hyprland
 fi
