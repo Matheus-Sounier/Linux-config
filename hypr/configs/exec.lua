@@ -1,0 +1,8 @@
+hl.on("hyprland.start", function()
+    hl.exec_cmd("waybar")
+    hl.exec_cmd("swaync")
+    hl.exec_cmd("/home/sounier/.cargo/bin/awww-daemon")
+    hl.exec_cmd("/home/sounier/dotfiles/hypr/scripts/wallpaper_front.sh")
+    hl.exec_cmd("wl-paste -t text --watch clipman store")
+    hl.exec_cmd("hypridle")
+end)
