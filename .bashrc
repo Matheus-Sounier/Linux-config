@@ -9,7 +9,7 @@ esac
 # Variáveis vêm do ~/.profile, aqui só aliases
 if [ "$XDG_SESSION_TYPE" = "wayland" ] && [ -n "$WAYLAND_DISPLAY" ]; then
     alias code='code --enable-features=UseOzonePlatform --ozone-platform=wayland --disable-gpu-sandbox'
-    alias chrome='google-chrome --enable-features=UseOzonePlatform --ozone-platform=wayland'
+    alias firefox='firefox --enable-features=UseOzonePlatform --ozone-platform=wayland'
 fi
 
 # Habilitar bash-completions para shells interativos
@@ -19,11 +19,11 @@ elif [ -f /etc/bash_completion ]; then
 	. /etc/bash_completion
 fi
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # HISTÓRICO OTIMIZADO
 export HISTCONTROL=erasedups:ignoredups:ignorespace
 shopt -s histappend
-HISTSIZE=3000
-HISTFILESIZE=5000
 shopt -s checkwinsize
 shopt -s globstar
 
@@ -42,10 +42,6 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt
-
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8 
-export XLOCALEDIR=/usr/share/X11/locale
 
 # Terminal title
 case "$TERM" in
@@ -177,3 +173,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Exec o fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"

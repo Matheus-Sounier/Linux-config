@@ -7,7 +7,7 @@ fi
 
 # Aplicações padrão
 export EDITOR=/usr/bin/code
-export BROWSER=google-chrome
+export BROWSER=firefox
 export TERMINAL=kitty
 export PAGER=less
 
@@ -27,3 +27,4 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 if [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
     exec Hyprland
 fi
+. "$HOME/.cargo/env"

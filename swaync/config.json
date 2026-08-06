@@ -5,15 +5,15 @@
 
     "cssPriority" : "user",
 
-    "control-center-width": 450,
-    "control-center-height": 750,
+    "control-center-width": 400,
+    "control-center-height": 600,
     "control-center-margin-top": 0,
-    "control-center-margin-bottom": 3,
+    "control-center-margin-bottom": 5,
     "control-center-margin-right": 0,
     "control-center-margin-left": 3,
 
-    "notification-window-width": 300,
-    "notification-icon-size": 48,
+    "notification-window-width": 400,
+    "notification-icon-size": 40,
     "notification-body-image-height": 160,
     "notification-body-image-width": 250,
 
@@ -89,7 +89,7 @@
                 },
                 {
                     "label": "",
-                    "command": "dolphin"
+                    "command": "thunar"
                 },
                 {
                     "label": "",
