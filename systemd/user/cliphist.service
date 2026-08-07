@@ -1,0 +1,11 @@
+[Unit]
+Description=Cliphist clipboard monitor
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/cliphist-daemon.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target
